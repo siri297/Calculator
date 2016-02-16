@@ -12,19 +12,23 @@ private int total;
 	}
 	
 	public void add (int value) {
-		
+		int sum = value + total;
 	}
 	
 	public void subtract (int value) {
-		
+		int sub = value - total;
 	}
 	
 	public void multiply (int value) {
 		
+		int multi = value * total;
 	}
 	
 	public void divide (int value) {
 		
+		int div = total/value;
+		if(value==0)
+			total=0;
 	}
 	
 	public String getHistory () {
