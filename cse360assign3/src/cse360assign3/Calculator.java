@@ -12,16 +12,16 @@ private int total;
 	}
 	
 	public void add (int value) {
-		int sum = value + total;
+		total+= value;
 	}
 	
 	public void subtract (int value) {
-		int sub = value - total;
+		total -= value;
 	}
 	
 	public void multiply (int value) {
 		
-		int multi = value * total;
+		total *= value ;
 	}
 	
 	public void divide (int value) {
