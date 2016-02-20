@@ -45,16 +45,17 @@ public class CalculatorTest {
 	@Test
 	public void testsubtract() {
 		Calculator oList = new Calculator();
+		oList.add(10);
 		oList.subtract(3);
 		
 		System.out.print(oList.getTotal());
-		assertEquals("3", outContent.toString());
+		assertEquals("7", outContent.toString());
 	}
 	
 	@Test
 	public void testMultiply() {
 		Calculator oList = new Calculator();
-		oList.multiply(4);
+		oList.add(4);
 		oList.multiply(4);
 		
 		System.out.print(oList.getTotal());
@@ -74,13 +75,12 @@ public class CalculatorTest {
 	public void testGetTotal() {
 		Calculator oList = new Calculator();
 		oList.add(10);
-		oList.add(9);
-		oList.subtract(10);
+		oList.subtract(5);
 		oList.multiply(9);
-		oList.divide(10);
+		oList.divide(5);
 		
 		System.out.print(oList.getTotal());
-		assertEquals("19 9 81 ", outContent.toString());
+		assertEquals("45", outContent.toString());
 	}
 	   
 
