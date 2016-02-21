@@ -1,3 +1,5 @@
+/** Name: Bhavana Chinta **/
+/** Pin-216**/
 package cse360assign3;
 import static org.junit.Assert.*;
 
@@ -26,14 +28,14 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void testCalculator() {
-		Calculator oList = new Calculator();
-		oList=null;
-		assertNotNull(" ", outContent.toString());
+	public void testCalculator() {          /** testCalculator method where it tests to make sure that the constructor does not  return a null.**/
+		Calculator oList = new Calculator(); 
+		/**oList=null;**/
+		assertNotNull(oList);
 	}
 
 	@Test
-	public void testAdd() {
+	public void testAdd() {     /** Test case of add where the add method is tested by sample values **/
 		Calculator oList = new Calculator();
 		oList.add(3);
 		oList.add(4);
@@ -43,7 +45,7 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void testsubtract() {
+	public void testsubtract() {      /** Test case of subtract where the subtract method is tested by giving in some values **/
 		Calculator oList = new Calculator();
 		oList.add(10);
 		oList.subtract(3);
@@ -53,7 +55,7 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void testMultiply() {
+	public void testMultiply() {   /** Test case of multiply where the multiply method is tested by giving in some values **/
 		Calculator oList = new Calculator();
 		oList.add(4);
 		oList.multiply(4);
@@ -63,9 +65,18 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void testDivide() {
+	public void testDivide() {    /** Test case of Divide where the divide method is tested by giving in some values **/
 		Calculator oList = new Calculator();
 		oList.divide(10);
+		
+		System.out.print(oList.getTotal());
+		assertEquals("0", outContent.toString());
+	}
+	
+	@Test
+	public void testDivide_by_Zero() {  /** Divide by zero tests the divide method when a zero is pluged in and it checks whether it gives a zero or not **/
+		Calculator oList = new Calculator();
+		oList.divide(0); 
 		
 		System.out.print(oList.getTotal());
 		assertEquals("0", outContent.toString());
@@ -82,6 +93,18 @@ public class CalculatorTest {
 		System.out.print(oList.getTotal());
 		assertEquals("45", outContent.toString());
 	}
-	   
+	
+	@Test
+	public void testGetHistory() {
+		Calculator myCalculator = new Calculator();
+		myCalculator.add (4);
+		myCalculator.subtract (2);
+		myCalculator.multiply (2);
+		myCalculator.add(5);
+		
+		System.out.print(myCalculator.getHistory());
+		assertEquals("0 + 4 – 2 * 2 + 5", outContent.toString());
+	}
+	
 
 }
