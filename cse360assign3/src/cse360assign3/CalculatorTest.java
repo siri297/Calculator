@@ -83,7 +83,7 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void testGetTotal() {
+	public void testGetTotal() {          /** This test case tests the getTotal() method which returns the total **/
 		Calculator oList = new Calculator();
 		oList.add(10);
 		oList.subtract(5);
@@ -91,11 +91,11 @@ public class CalculatorTest {
 		oList.divide(5);
 		
 		System.out.print(oList.getTotal());
-		assertEquals("45", outContent.toString());
+		assertEquals("9", outContent.toString());
 	}
 	
 	@Test
-	public void testGetHistory() {
+	public void testGetHistory() {              /** GetHistory() method is tested in such a way that the output should be number+sign and with spaces **/
 		Calculator myCalculator = new Calculator();
 		myCalculator.add (4);
 		myCalculator.subtract (2);
